@@ -53,7 +53,7 @@ input[type=range]{width:100%;accent-color:var(--acc)}
 <aside class="panel">
 <h1>Bloom Studio</h1>
 <p class="sub">Arrange a bouquet, then turn a link into flowers that scan.</p>
-<div class="row"><input id="url" type="text" maxlength="90" value="https://claude.ai" placeholder="Paste a link" autocomplete="off" inputmode="url"><button id="go" class="pri">Bloom QR</button></div>
+<div class="row"><input id="url" type="text" maxlength="90" value=" " placeholder="Paste a link" autocomplete="off" inputmode="url"><button id="go" class="pri">Bloom QR</button></div>
 <div id="msg" class="msg" aria-live="polite">Tap the bouquet or press Bloom QR to make the code.</div>
 <button id="back" class="sec" hidden>Back to bouquet</button>
 <h2>Flower</h2><div id="fl" class="chips"></div>
@@ -330,7 +330,7 @@ function msg(t){$('msg').textContent=t;}
 function ui(){$('back').hidden=mode!=='qr';$('hint').textContent=mode==='qr'?'Tap the QR code to turn it back into a bouquet':'Tap the bouquet to bloom a QR code';}
 function bloom(){
  let v=$('url').value.trim(),smp=false;
- if(!v){v='https://claude.ai';$('url').value=v;smp=true;}
+ if(!v){v='https://madhushreewarke-24.github.io/REPO-NAME/';$('url').value=v;smp=true;}
  if(!/^[a-z][a-z0-9+.-]*:/i.test(v)&&/^[^\s]+\.[^\s]{2,}$/.test(v))v='https://'+v;
  let q;try{q=qrcode(0,'M');q.addData(v);q.make();}catch(e){msg('That link is too long for a flower QR. Try a shorter one.');return;}
  const n=q.getModuleCount(),m=5/n,dark=[];
