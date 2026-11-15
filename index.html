@@ -375,7 +375,7 @@ async function share(){const b=await snap();if(!b){msg('Could not capture the im
  try{if(navigator.canShare&&navigator.canShare({files:[f]})){await navigator.share({files:[f],title:'My Bloom Studio creation'});return;}}catch(e){if(e&&e.name==='AbortError')return;}
  if(await saveImg())msg('Sharing isn’t supported in this view, so save the image and share it from your files.');}
 $('dl').onclick=e=>{e.stopPropagation();saveImg();};$('sh').onclick=e=>{e.stopPropagation();share();};
-const BASE='https://claude.ai/artifact/BnvsJ5Yfji9HpZfGx5FEpd';
+const BASE='https://madhushreewarke-24.github.io/bloom-studio-AI/';
 async function shareLink(){const u=BASE+'#'+cfgHash(),f=$('lkv'),b=$('lk');
  f.hidden=false;f.value=u;f.focus();f.select();try{f.scrollIntoView({block:'nearest'});}catch(e){}
  let ok=false;try{ok=document.execCommand('copy');}catch(e){}
